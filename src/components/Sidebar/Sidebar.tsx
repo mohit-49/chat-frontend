@@ -160,9 +160,9 @@ const Sidebar: React.FC<SidebarProps> = ({ currentUser, onCreateGroup }) => {
             )}
 
 
-            {activeModal === "deleteaccount" && (
+            {/* {activeModal === "deleteaccount" && (
                 <DeleteAccountBox onBack={() => setActiveModal("account")} />
-            )}
+            )} */}
 
 
 

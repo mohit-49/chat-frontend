@@ -13,6 +13,7 @@ const EmailAddressBox: React.FC<EmailAddressBoxProps> = ({ onBack, userEmail }) 
             <i className="ri-arrow-left-line"></i>
         </button>
         <h3>📧 Email Address</h3>
+         <h3>📧 Email Address</h3>
       </div><hr />
 
       <div className="email-content">

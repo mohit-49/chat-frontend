@@ -13,9 +13,7 @@ export default function DeleteUser({ onClose, user }: { onClose: () => void; use
   const handleDelete = () => {
     toast.custom((t) => (
       <div className="toast-container">
-        <h4>⚠️ Confirm Deletion</h4>
-          <h4>⚠️ Confirm Deletion</h4>
-            <h4>⚠️ Confirm Deletion</h4>
+        <h4>⚠️ Confirm Deletion</h4>         
         <p>
           Are you sure you want to delete your account? This is a <b>soft delete</b>.
         </p>

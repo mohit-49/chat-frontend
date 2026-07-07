@@ -156,13 +156,7 @@ export default function RegisterForm() {
         <h1>Create Account</h1>
         <p>
           Join now and start chatting with your friends and family. Safe, secure, and easy to use.
-        </p>
-         <p>
-          Join now and start chatting with your friends and family. Safe, secure, and easy to use.
-        </p>
-         <p>
-          Join now and start chatting with your friends and family. Safe, secure, and easy to use.
-        </p>
+        </p>       
       </div>
     </div>
   );

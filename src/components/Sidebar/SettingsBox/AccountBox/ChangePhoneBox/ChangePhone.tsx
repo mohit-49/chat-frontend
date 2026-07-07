@@ -27,8 +27,7 @@ const ChangeNumberBox: React.FC<ChangeNumberBoxProps> = ({ onBack }) => {
         {step === 1 && (
           <>
             <div className="change-number-icon">
-              <i>📞</i>
-              <i>📞</i>
+              <i>📞</i>             
             </div>
 
             <p className="change-number-desc">

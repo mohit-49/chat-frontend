@@ -99,6 +99,10 @@ export default function LoginForm() {
           <IconButton size="small">
             <i className="ri-google-fill" style={{ color: "#DB4437", fontSize: "28px" }} />
           </IconButton>
+
+           <IconButton size="small">
+            <i className="ri-google-fill" style={{ color: "#DB4437", fontSize: "28px" }} />
+          </IconButton>
         </div>
       </div>
     </div>

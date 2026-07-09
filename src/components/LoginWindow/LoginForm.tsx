@@ -29,7 +29,6 @@ export default function LoginForm() {
         login(token, user);
         router.push("/chat");
       } else {
-        // console.log("Token or user not found", res.data);
       }
     } catch (error: any) {
       toast.error(error.response?.data?.message || "Login failed");
@@ -98,8 +97,7 @@ export default function LoginForm() {
 
           <IconButton size="small">
             <i className="ri-google-fill" style={{ color: "#DB4437", fontSize: "28px" }} />
-          </IconButton>
-         
+          </IconButton>         
         </div>
       </div>
     </div>

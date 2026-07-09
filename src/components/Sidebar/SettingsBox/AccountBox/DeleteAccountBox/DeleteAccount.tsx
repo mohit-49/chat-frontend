@@ -66,8 +66,8 @@ export default function DeleteUser({ onClose, user }: { onClose: () => void; use
             <button
               className="btn-cancel"
               onClick={() => {
-                toast.dismiss(); // optional: dismiss any toast
-                onClose();       // remove the modal
+                toast.dismiss(); 
+                onClose();
               }}
               disabled={loading}
             >

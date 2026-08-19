@@ -11,7 +11,7 @@ import { useLoader } from "@/components/LoaderContext";
 export default function RegisterForm() {
   const { showLoader, hideLoader } = useLoader();
   const router = useRouter();
-  const [email, setEmail] = useState("");
+  // const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");

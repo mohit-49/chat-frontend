@@ -19,10 +19,10 @@ type User = {
     avatar: string;
 };
 
-type SidebarProps = {
-    currentUser: User;
-    onCreateGroup?: () => void;
-};
+// type SidebarProps = {
+//     currentUser: User;
+//     onCreateGroup?: () => void;
+// };
 
 type ActiveModal =
     | "menu"
@@ -36,7 +36,6 @@ type ActiveModal =
     | "requestaccountinfo"
     | "addaccount"
     | "deleteaccount"
-
     | "privacy"
     | null;
 

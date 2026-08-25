@@ -21,15 +21,15 @@ export default function Header() {
     }
   };
 
-  const handleLogout = async () => {
-    try {
-      showLoader();
-      await logout(); 
-      await router.push("/login");
-    } finally {
-      hideLoader();
-    }
-  };
+  // const handleLogout = async () => {
+  //   try {
+  //     showLoader();
+  //     await logout(); 
+  //     await router.push("/login");
+  //   } finally {
+  //     hideLoader();
+  //   }
+  // };
 
   return (
     <header className="header">

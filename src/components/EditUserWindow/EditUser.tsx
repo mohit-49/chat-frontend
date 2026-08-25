@@ -6,11 +6,6 @@ import "./EditUser.css";
 import toast, { Toaster } from 'react-hot-toast';
 import { useAuth } from "@/context/AuthContext";
 
-interface EditUserProps {
-  user: any;
-  onClose: () => void;
-  onUpdated?: (user: any) => void;
-}
 
 export default function EditUser({ user, onClose, onUpdated }: EditUserProps) {
   const { login } = useAuth();

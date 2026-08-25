@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { getToken } from "@/lib/auth";
-import { useRouter } from "next/navigation";
 import "./EditUser.css";
 import toast, { Toaster } from 'react-hot-toast';
 import { useAuth } from "@/context/AuthContext";
@@ -27,7 +26,6 @@ export default function EditUser({ user, onClose, onUpdated }: EditUserProps) {
   const [avatarFile, setAvatarFile] = useState<File | null>(null);
   const [submitting, setSubmitting] = useState(false);
   const token = getToken();
-  const router = useRouter();
 
   useEffect(() => {
     if (user) {
@@ -105,97 +103,97 @@ export default function EditUser({ user, onClose, onUpdated }: EditUserProps) {
   };
 
   return (
-<div className="modal-backdrop">
-  <div className="edit-modal">
-    {/* Header with title and close button */}
-    <div className="edit-modal-header">
-      <h2>Edit Profile</h2>
-      <button className="close-btn" onClick={onClose}>✖</button>
-    </div>
+    <div className="modal-backdrop">
+      <div className="edit-modal">
+        {/* Header with title and close button */}
+        <div className="edit-modal-header">
+          <h2>Edit Profile</h2>
+          <button className="close-btn" onClick={onClose}>✖</button>
+        </div>
 
-    {/* Avatar and action buttons row */}
-    <div className="avatar-row">
-      <div className="avatar-preview">
-        {avatarFile ? (
-          <img src={URL.createObjectURL(avatarFile)} alt="Avatar Preview" />
-        ) : user.avatar ? (
-          <img src={`${process.env.NEXT_PUBLIC_API_URL}${user.avatar}`} alt={user.name} />
-        ) : (
-          <div className="avatar-placeholder">{user.name?.charAt(0)}</div>
-        )}
-        <label className="select-avatar-btn">
-          + Select Avatar
+        {/* Avatar and action buttons row */}
+        <div className="avatar-row">
+          <div className="avatar-preview">
+            {avatarFile ? (
+              <img src={URL.createObjectURL(avatarFile)} alt="Avatar Preview" />
+            ) : user.avatar ? (
+              <img src={`${process.env.NEXT_PUBLIC_API_URL}${user.avatar}`} alt={user.name} />
+            ) : (
+              <div className="avatar-placeholder">{user.name?.charAt(0)}</div>
+            )}
+            <label className="select-avatar-btn">
+              + Select Avatar
+              <input
+                type="file"
+                accept="image/*"
+                onChange={(e) => setAvatarFile(e.target.files?.[0] ?? null)}
+              />
+            </label>
+          </div>
+
+          {/* Buttons on the right side */}
+          <div className="avatar-buttons">
+
+            <button type="submit" disabled={submitting} className="btn-save" onClick={handleSubmit}>
+              {submitting ? "Saving..." : "Save"}
+            </button>
+            <button type="button" onClick={onClose} disabled={submitting} className="btn-cancel">
+              Cancel
+            </button>
+          </div>
+        </div>
+
+        <form className="edit-form">
+          <label>Name</label>
           <input
-            type="file"
-            accept="image/*"
-            onChange={(e) => setAvatarFile(e.target.files?.[0] ?? null)}
+            type="text"
+            value={form.name}
+            onChange={(e) => handleChange("name", e.target.value)}
           />
-        </label>
-      </div>
 
-      {/* Buttons on the right side */}
-      <div className="avatar-buttons">
-      
-        <button type="submit" disabled={submitting} className="btn-save" onClick={handleSubmit}>
-          {submitting ? "Saving..." : "Save"}
-        </button>
-          <button type="button" onClick={onClose} disabled={submitting} className="btn-cancel">
-          Cancel
-        </button>
+          <label>Username</label>
+          <input
+            type="text"
+            value={form.username}
+            onChange={(e) => handleChange("username", e.target.value)}
+          />
+
+          <label>Email</label>
+          <input
+            type="email"
+            value={form.email}
+            onChange={(e) => handleChange("email", e.target.value)}
+          />
+
+          <label>About</label>
+          <textarea
+            value={form.about}
+            onChange={(e) => handleChange("about", e.target.value)}
+          />
+
+          <label>Birthday</label>
+          <input
+            type="date"
+            value={form.birthday}
+            onChange={(e) => handleChange("birthday", e.target.value)}
+          />
+
+          <label>Height (cm)</label>
+          <input
+            type="number"
+            value={form.height}
+            onChange={(e) => handleChange("height", e.target.value)}
+          />
+
+          <label>Weight (kg)</label>
+          <input
+            type="number"
+            value={form.weight}
+            onChange={(e) => handleChange("weight", e.target.value)}
+          />
+        </form>
       </div>
     </div>
-
-    <form className="edit-form">
-      <label>Name</label>
-      <input
-        type="text"
-        value={form.name}
-        onChange={(e) => handleChange("name", e.target.value)}
-      />
-
-      <label>Username</label>
-      <input
-        type="text"
-        value={form.username}
-        onChange={(e) => handleChange("username", e.target.value)}
-      />
-
-      <label>Email</label>
-      <input
-        type="email"
-        value={form.email}
-        onChange={(e) => handleChange("email", e.target.value)}
-      />
-
-      <label>About</label>
-      <textarea
-        value={form.about}
-        onChange={(e) => handleChange("about", e.target.value)}
-      />
-
-      <label>Birthday</label>
-      <input
-        type="date"
-        value={form.birthday}
-        onChange={(e) => handleChange("birthday", e.target.value)}
-      />
-
-      <label>Height (cm)</label>
-      <input
-        type="number"
-        value={form.height}
-        onChange={(e) => handleChange("height", e.target.value)}
-      />
-
-      <label>Weight (kg)</label>
-      <input
-        type="number"
-        value={form.weight}
-        onChange={(e) => handleChange("weight", e.target.value)}
-      />
-    </form>
-  </div>
-</div>
 
 
   );

@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, } from "react";
 import EditUser from "../EditUserWindow/EditUser";
 import DeleteUser from "../DeleteUserWindow/DeleteUser";
 import SettingsBox from "./SettingsBox/SettingsBox";

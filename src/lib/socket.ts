@@ -15,16 +15,13 @@ export const connectSocket = () => {
   });
 
   socket.on("connect", () => {
-    // console.log("Socket connected:", socket?.id);
   });
 
-  socket.on("connect_error", (err) => {
-    // console.error("Socket error:", err.message);
+  socket.on("connect_error", () => {
   });
 
-  socket.on("disconnect", (reason) => {
-  // console.log("Socket disconnected:", reason);
-});
+  socket.on("disconnect", () => {
+  });
 
   return socket;
 };

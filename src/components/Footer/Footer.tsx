@@ -65,6 +65,9 @@ export default function Footer() {
           </a>
           <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
             <i className="ri-linkedin-fill" />
+          </a> 
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <i className="ri-linkedin-fill" />
           </a>        
         </div>
       </div>

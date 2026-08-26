@@ -1,8 +1,6 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
-import { useLoader } from "../LoaderContext";
 import { useAuth } from "@/context/AuthContext"; 
 import "./Header.css";
 

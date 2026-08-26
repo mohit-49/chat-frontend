@@ -12,8 +12,8 @@ export default function RegisterForm() {
   const { showLoader, hideLoader } = useLoader();
   const router = useRouter();
   const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
-  const [username, setUsername] = useState("");
+  // const [name, setName] = useState("");
+  // const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [avatar, setAvatar] = useState<File | null>(null);
   const [showPassword, setShowPassword] = useState(false);

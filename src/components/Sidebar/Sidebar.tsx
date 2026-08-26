@@ -13,16 +13,7 @@ import AddAccountForm from "./SettingsBox/AccountBox/AddAccountBox/AddAccount";
 import DeleteAccountBox from "./SettingsBox/AccountBox/DeleteAccountBox/DeleteAccount";
 import Privacy from "./SettingsBox/Privacy/PrivacyBox";
 
-type User = {
-    name: string;
-    email: string;
-    avatar: string;
-};
 
-type SidebarProps = {
-    currentUser: User;
-    onCreateGroup?: () => void;
-};
 
 type ActiveModal =
     | "menu"

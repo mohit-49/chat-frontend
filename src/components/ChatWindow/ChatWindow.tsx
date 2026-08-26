@@ -61,7 +61,6 @@ const ChatWindow = () => {
   const chatRef = useRef<HTMLDivElement>(null);
 
   const otherUser = selectedRoom?.members.find((m) => m._id !== currentUser._id) || null;
-  // console.log("otherUser", otherUser)
 
 
   //  Chat-header menu part ... view contact

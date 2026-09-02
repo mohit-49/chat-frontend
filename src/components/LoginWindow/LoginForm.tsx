@@ -37,26 +37,6 @@ export default function LoginForm() {
     }
   };
 
-    const handleLogin = async (e: React.FormEvent) => {
-    e.preventDefault();
-    showLoader()
-    try {
-      const res = await api.post("/auth/login", { email, password });
-      const token = res.data.access_token;
-      const user = res.data.user;
-
-      if (token && user) {
-        login(token, user);
-        router.push("/chat");
-      } else {
-      }
-    } catch (error: any) {
-      toast.error(error.response?.data?.message || "Login failed");
-    } finally {
-      hideLoader();
-    }
-  };
-
 
   return (
     <div className="login-container">
@@ -117,7 +97,7 @@ export default function LoginForm() {
 
           <IconButton size="small">
             <i className="ri-google-fill" style={{ color: "#DB4437", fontSize: "28px" }} />
-          </IconButton>         
+          </IconButton>
         </div>
       </div>
     </div>

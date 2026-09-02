@@ -14,8 +14,7 @@ export default function Footer() {
             <img src="/logo.png" alt="logo img" /><span className="footer-span">MyChat</span>
           </div>
           <p className="footer-about">
-            Experience messaging the way it’s meant to be – private, reliable,
-            and fun. Stay connected with the people who matter most.
+            Analyze pull requests smarter – secure, reliable, and powered by AI.
           </p>
         </div>
         <div className="footer-column">

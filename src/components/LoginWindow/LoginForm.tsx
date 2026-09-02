@@ -22,6 +22,7 @@ export default function LoginForm() {
     showLoader()
     try {
       const res = await api.post("/auth/login", { email, password });
+      console.log("response for login side",res)
       const token = res.data.access_token;
       const user = res.data.user;
 

@@ -6,6 +6,7 @@ import { useEffect } from "react";
 
 export default function ProtectedRoute({ children }: { children: React.ReactNode }) {
   const { user, loading } = useAuth();
+  console.log("check the user",user)
   const router = useRouter();
 
   useEffect(() => {

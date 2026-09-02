@@ -18,7 +18,7 @@ export default function Loader() {
     >
       <div
         style={{
-          width: 96,
+          width: 98,
           height: 96,
           borderWidth: 8,
           borderStyle: "solid",

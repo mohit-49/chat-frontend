@@ -155,7 +155,7 @@ export default function RegisterForm() {
       <div className="signup-info">
         <h1>Create Account</h1>
         <p>
-          Join now and start chatting with your friends and family. Safe, secure, and easy to use.
+          Create your account and start smarter code reviews with AI
         </p>       
       </div>
     </div>

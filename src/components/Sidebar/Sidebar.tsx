@@ -91,7 +91,7 @@ const Sidebar: React.FC<SidebarProps> = ({ currentUser, onCreateGroup }) => {
                         <li className="coming-soon">🔗 Linked Devices</li>
                         <li className="coming-soon">💳 Payments</li>
                         <li className="coming-soon">📖 Read All</li>
-                        <li className="coming-soon">♋ Starred</li>
+                        {/* <li className="coming-soon">♋ Starred</li> */}
                     </ul>
                 </div>
             )}

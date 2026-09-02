@@ -35,7 +35,7 @@ export default function Header() {
     <header className="header">
       <div className="header-container">
         <div className="header-logo" onClick={() => handleNavigation("/")}>
-          <img src="/logo.png" alt="logo img" />
+          <img src="/logo.png" alt="logo img alt" />
         </div>
 
         <nav className="header-nav">
